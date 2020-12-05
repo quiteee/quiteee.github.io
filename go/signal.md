@@ -23,6 +23,7 @@ func Stop(c chan<- os.Signal)
 > 3. 当 Stop 函数返回时，会确保 c 不再接收信号
 
 ##示例
+
 ```
 func main() {
 	ch := make(chan os.Signal, 1)
@@ -41,5 +42,5 @@ func main() {
 }
 ```
 补充说明
-> 函数每 3s 输出 "Running"，直到进程被中断
-> ch 缓存大小指定为1，这是考虑到上面讲的 Notify 官方描述第2条，否则很可能无法及时收到信息
+> 1. 函数每 3s 输出 "Running"，直到进程被中断
+> 2. ch 缓存大小指定为1，这是考虑到上面讲的 Notify 官方描述第2条，否则很可能无法及时收到信息
