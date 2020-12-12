@@ -1,4 +1,7 @@
 # signal包中的Notify和Stop函数
+
+> 2020-12-05
+
 ## signal.Notify
 函数声明
 
