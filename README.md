@@ -1,8 +1,8 @@
-## Welcome to Quiteee's Blog
-
-页面很简陋，先记个TODO
+## 今天也要开心鸭
 
 # Go 
-[signal包中的Notify和Stop函数](https://quiteee.github.io/go/signal)
+1. [signal包中的Notify和Stop函数](https://quiteee.github.io/go/signal)
 
-[Go语言实战 | 并发模式 - Pool](https://quiteee.github.io/go/pool)
+2. [Go语言实战 | 并发模式 - Pool](https://quiteee.github.io/go/pool)
+
+3. [Go内存-TCMalloc](https://quiteee.github.io/go/tcmalloc)
