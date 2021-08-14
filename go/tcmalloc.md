@@ -81,15 +81,18 @@ TCMalloc（Thread-Caching Malloc），顾名思义就是基于线程来分配内
 
 小对象分配过程：
 
-> 1. 根据小对象的大小，找到对应的 size_class
-> 2.  找到当前线程的 thread-local cache，从对应 size_class 的空闲链表里找到空闲的 object。
-> 3. 如果空闲链表里有 object，会返回链表第一项，并将其从空闲链表中删除
-> 4. 如果空闲链表非空，需要先从上层 central free list 获取到对应 size_class 的 objects
->    I. central free list 的结构可以认为是和 thread-local cache 一样，都是为每个 size_class 维护一个 objects 的空闲链表
->    II. 将获取到的 objects 放入 thread-local cahe，然后从返回链表第一项。
->    III. 如果 central free list 的空间也不足，会向 heap 获取 span，进行分割后放入 central free list。
+1. 根据小对象的大小，找到对应的 size_class
+2. 找到当前线程的 thread-local cache，从对应 size_class 的空闲链表里找到空闲的 object。
+3. 如果空闲链表里有 object，会返回链表第一项，并将其从空闲链表中删除
+4. 如果空闲链表非空，需要先从上层 central free list 获取到对应 size_class 的 objects
+    1. central free list 的结构可以认为是和 thread-local cache 一样，都是为每个 size_class 维护一个 objects 的空闲链表
+    2. 从 central free list 获取的 objects 放入 thread-local cache 后，返回链表第一项。
+    3. 如果 central free list 的空间也不足，会向 heap 获取 span，进行分割后放入 central free list。
 
-**Tips**: 第 3 步不需要上锁，因为thread-local cache 只被当前线程占用。第 4 步需要上锁，因为 central free list 是所有线程公用的。
+**Tips**
+> 第 3 步不需要上锁，因为thread-local cache 只被当前线程占用。
+>
+> 第 4 步需要上锁，因为 central free list 是所有线程公用的。
 
 
 
@@ -101,11 +104,11 @@ TCMalloc（Thread-Caching Malloc），顾名思义就是基于线程来分配内
 
 大对象分配过程：
 
-> 1. 先按照对象大小计算需要多少page（每个page 4K），然后去对应的链表里找空闲空间。
-> 2. 对于需要 >= 256 个页的对象，统一用 rest 分配。
-> 3. 如果需要分配的链表（假设 k）为空，即没有可分配的空间，就去找下一个链表（k + 1），再下一个。。。
-> 4. 如果在某个链表里找到了（k + n），会将多余的 n 个页插入到合适的链表位置。
-> 5. 如果找到rest依然空间不足，需要向系统申请资源。
+1. 先按照对象大小计算需要多少page（每个page 4K），然后去对应的链表里找空闲空间。
+2. 对于需要 >= 256 个页的对象，统一用 rest 分配。
+3. 如果需要分配的链表（假设 k）为空，即没有可分配的空间，就去找下一个链表（k + 1），再下一个。。。
+4. 如果在某个链表里找到了（k + n），会将多余的 n 个页插入到合适的链表位置。
+5. 如果找到rest依然空间不足，需要向系统申请资源。
 
 
 
@@ -132,6 +135,7 @@ thread-local cahe 大小超过 2MB 时，会进行垃圾回收（GC）。
 回收时，每个空闲链表的回收objects数量由参数 L 决定。下面先定义一下 L：
 
 > L 是自上次垃圾回收后，空闲链表的最小长度。
+>
 > 说明在上一次垃圾回收时，即使剩余空闲链表缩小 L，在上一次垃圾回收到本次回收期间，并不会触发向central free list 请求资源。
 
 可以将 L 作为对未来的预测，每次将 L/2 的 objects 回收到 central free list 中。
