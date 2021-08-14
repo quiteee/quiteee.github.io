@@ -14,11 +14,17 @@ TCMalloc（Thread-Caching Malloc），顾名思义就是基于线程来分配内
 ## 名词解释
 
 **Thread-local cache**: 给每个thread分配的本地缓存
+
 **Page**：页，TCMalloc中整个堆由页组成，每个页大小为4KB
+
 **Span**：一行（a run of）连续的页，可以是被分配的（allocated）或者空闲的（free），是页堆链表里的节点（entry）
+
 **小对象**：size <= 32KB
+
 **大对象**：size > 32KB
+
 **Object**：页分割成的不同大小
+
 **Size_class**：可以理解为object的类型，每种size_class有对应的object大小，页会根据size_class进行分割。
 
 ## Span
