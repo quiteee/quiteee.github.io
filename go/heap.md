@@ -220,4 +220,8 @@ type mcentral struct {
 * 小对象 (>=16B && <=32KB)，用 mcache 中，合适 class 的 mspan 分割成的 object 分配。
 * 大对象 (>32KB)，直接用 mheap 分配。
 
+## 参考
+1. https://www.cnblogs.com/zpcoding/p/13259943.html#_label1_2
+2. https://www.jianshu.com/p/7405b4e11ee2
+
 ## END
