@@ -221,7 +221,7 @@ type mcentral struct {
 * 大对象 (>32KB)，直接用 mheap 分配。
 
 ## 参考
-1. https://www.cnblogs.com/zpcoding/p/13259943.html#_label1_2
-2. https://www.jianshu.com/p/7405b4e11ee2
+1. [https://www.cnblogs.com/zpcoding/p/13259943.html](https://www.cnblogs.com/zpcoding/p/13259943.html)
+2. [https://www.jianshu.com/p/7405b4e11ee2](https://www.jianshu.com/p/7405b4e11ee2)
 
 ## END
