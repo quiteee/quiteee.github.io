@@ -10,3 +10,11 @@
 *2021.05.02* [Go内存 - TCMalloc](https://quiteee.github.io/go/tcmalloc)
 
 *2021.08.14* [Go内存 - 堆内存管理](https://quiteee.github.io/go/heap)
+
+# OS
+
+#### **读书笔记**
+
+######《Writing A Simple Operating System》
+
+*2021.08.20* [BIOS、中断、寄存器](https://quiteee.github.io/os/WritingASimpleOperatingSystem-1)
