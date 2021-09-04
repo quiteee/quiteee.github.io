@@ -16,3 +16,5 @@
 ***《Writing A Simple Operating System》***
 
 1. [BIOS、中断、寄存器](https://quiteee.github.io/os/WritingASimpleOperatingSystem-1)
+
+2. [Stack、段寄存器](https://quiteee.github.io/os/WritingASimpleOperatingSystem-2)
