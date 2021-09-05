@@ -5,7 +5,7 @@
 ## 背景
 感觉自己操作系统方面的知识比较薄弱，上学时候学的都还给老师了QAQ。
 
-个人觉得纯理论的书看起来比较吃力，所以主要参考这本书：《Writing a Simple Operating System — from Scratch》，希望可以边动手边学一点知识。
+主要参考这本书：《Writing a Simple Operating System — from Scratch》
 
 配合[https://github.com/ruiers/os-tutorial-cn](https://github.com/ruiers/os-tutorial-cn)食用。
 
