@@ -22,3 +22,7 @@
 *2021.09.01* [Stack、段寄存器](https://quiteee.github.io/os/WritingASimpleOperatingSystem-2)
 
 *2021.09.05* [32-bit protected mode、GDT](https://quiteee.github.io/os/WritingASimpleOperatingSystem-3)
+
+***《Operating Systems: Three Easy Pieces》***
+
+*2021.09.10* [Introduction](https://quiteee.github.io/os/OperatingSystemsThreeEasyPieces-1)

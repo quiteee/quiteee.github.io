@@ -20,3 +20,7 @@
 2. [Stack、段寄存器](https://quiteee.github.io/os/WritingASimpleOperatingSystem-2)
 
 3. [32-bit protected mode、GDT](https://quiteee.github.io/os/WritingASimpleOperatingSystem-3)
+
+***《Operating Systems: Three Easy Pieces》***
+
+1. [Introduction](https://quiteee.github.io/os/OperatingSystemsThreeEasyPieces-1)
