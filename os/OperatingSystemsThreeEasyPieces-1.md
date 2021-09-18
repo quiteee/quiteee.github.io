@@ -1,6 +1,6 @@
-# 【读书笔记】Operating Systems: Three Easy Pieces - 1
+# Introduction
 
-> 2021.09.10
+> 2021.09.10 \| 《Operating Systems: Three Easy Pieces》- 1
 
 ## Introduction
 
@@ -12,7 +12,9 @@
 
 可以将 **OS** 视为 **资源管理器**，负责管理CPU、内存、硬盘等资源。
 
-### 虚拟化(virtualization)
+## 主要的三个特征
+
+### 1. 虚拟化(virtualization)
 
 #### CPU 虚拟化
 
@@ -24,11 +26,11 @@
 
 对于一个正在运行的程序而言，它仿佛拥有自己的物理内存。实际上，物理内存是由操作系统管理的共享资源。
 
-### 并发性(concurrency)
+### 2. 并发性(concurrency)
 
 同时处理多个进程，涉及到进程执行的原子性。
 
-### 持久性(persistence)
+### 3. 持久性(persistence)
 
 在系统内存中，数据可能是易失的，因此需要 OS 通过硬件和软件等进行数据持久化。
 

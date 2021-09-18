@@ -3,11 +3,12 @@
 > 2021-08-20
 
 ## 背景
-感觉自己操作系统方面的知识比较薄弱，上学时候学的都还给老师了QAQ。
 
 主要参考这本书：《Writing a Simple Operating System — from Scratch》
 
 配合[https://github.com/ruiers/os-tutorial-cn](https://github.com/ruiers/os-tutorial-cn)食用。
+
+最近进度：已放弃了=。=，被推荐了另一本书《Operating Systems: Three Easy Pieces》
 
 ## BIOS (Basic Input/Output Software)
 
