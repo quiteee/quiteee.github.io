@@ -28,3 +28,5 @@
 2. [Virtualization | Process](https://quiteee.github.io/os/OperatingSystemsThreeEasyPieces-2.html)
 
 3. [Virtualization | CPU](https://quiteee.github.io/os/OperatingSystemsThreeEasyPieces-3.html)
+
+3. [Virtualization | CPU 调度](https://quiteee.github.io/os/OperatingSystemsThreeEasyPieces-4.html)

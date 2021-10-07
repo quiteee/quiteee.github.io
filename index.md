@@ -30,3 +30,5 @@
 *2021.09.15* [Virtualization \| Process](https://quiteee.github.io/os/OperatingSystemsThreeEasyPieces-2.html)
 
 *2021.09.22* [Virtualization \| CPU](https://quiteee.github.io/os/OperatingSystemsThreeEasyPieces-3.html)
+
+*2021.09.27* [Virtualization \| CPU 调度](https://quiteee.github.io/os/OperatingSystemsThreeEasyPieces-4.html)
